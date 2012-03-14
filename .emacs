@@ -31,6 +31,12 @@
 ;; shortcuts
 ;; f1 -> shell
 (global-set-key [f1] 'shell)
+(global-set-key "\C-a"
+                (lambda ()
+                  (interactive)
+                  (if (= (point) (line-beginning-position))
+                      (beginning-of-line-text)
+                    (beginning-of-line))))
 
 ;; display line numbers
 ;; line-mode is useless in some cases, so I just list out the
