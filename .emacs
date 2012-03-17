@@ -1,26 +1,24 @@
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(tool-bar-mode nil))
+;; hide tool bar
+(tool-bar-mode nil)
 
 ;; Iterate a list of fonts, if current font exists, set
 ;; font style and size.
-(defun try-set-font (font-list font-size)
+(defun try-set-font (font-list)
   (defun font-exists (font-name)
     (if (null (x-list-fonts font-name))
         nil t))
   (when font-list
-    (let ((font-name (car font-list)))
+    (let ((font-name (car (car font-list)))
+          (font-size (cdr (car font-list))))
       (if (font-exists font-name)
           (set-default-font (concat font-name "-" 
                                     (number-to-string font-size)))
-        (try-set-font (cdr font-list) font-size)))))
+        (try-set-font (cdr font-list))))))
 
-(try-set-font
- '("Monaco" "DejaVu Sans Mono" "Courier New")
- 12)
+(try-set-font '(("Monaco" . 12)
+                ("Consolas" . 13)
+                ("DejaVuSans Mono" . 12)
+                ("Courier New" . 12)))
 
 ;; share clipboard with external programs
 (setq x-select-enable-clipboard t)
@@ -31,12 +29,19 @@
 ;; shortcuts
 ;; f1 -> shell
 (global-set-key [f1] 'shell)
+;; Click C-a go to beginning of line, click again
+;; go to beginning of line text.
 (global-set-key "\C-a"
                 (lambda ()
                   (interactive)
                   (if (= (point) (line-beginning-position))
                       (beginning-of-line-text)
                     (beginning-of-line))))
+;; kill whole line
+(global-set-key "\C-k"
+                (lambda ()
+                  (interactive)
+                  (kill-whole-line)))
 
 ;; display line numbers
 ;; line-mode is useless in some cases, so I just list out the
@@ -50,21 +55,22 @@
 ;; Always reserve 3-digit-width when line number is less than 100.
 (setq linum-format "%3d")
 
-;; my emacs plugins
-;; 1. yasnippet
-;; 2. google-c-style
-;; 3. auto-complete
-;; 4. ibus
-;; 5. yaml-mode
-;; 6. color-theme
-
 (add-to-list 'load-path "~/.emacs.d/plugins")
 
 ;; yasnippet
-;; (add-to-list 'load-path "~/.emacs.d/plugins/yasnippet")
-;; (require 'yasnippet)
-;; (yas/initialize)
-;; (yas/load-directory "~/.emacs.d/plugins/yasnippet/snippets")
+(add-to-list 'load-path "~/.emacs.d/plugins/yasnippet")
+(require 'yasnippet)
+(yas/global-mode 1)
+(setq yas/prompt-functions
+      '(yas/dropdown-prompt
+        yas/completing-prompt))
+
+;; dropdown list
+(require 'dropdown-list)
+(set-face-foreground 'dropdown-list-face "black")
+(set-face-background 'dropdown-list-face "lightgray")
+(set-face-foreground 'dropdown-list-selection-face "white")
+(set-face-background 'dropdown-list-selection-face "steelblue")
 
 ;; google c style
 (require 'google-c-style)
