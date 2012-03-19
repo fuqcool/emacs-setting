@@ -1,0 +1,6 @@
+# name: if __name__ == "__main__":
+# key: ifmain
+# contributor: fuqcool
+# --
+if __name__ == "__main__":
+$0
