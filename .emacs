@@ -26,6 +26,10 @@
 ;; insert spaces instead of tabs
 (setq-default indent-tabs-mode nil)
 
+;; prefer utf-8
+(setq prefer-coding-system 'utf-8)
+(setq default-buffer-file-coding-system 'utf-8)
+
 ;; shortcuts
 ;; f1 -> shell
 (global-set-key [f1] 'shell)
