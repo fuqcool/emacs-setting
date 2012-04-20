@@ -1,0 +1,7 @@
+# name: function (arguments) { ... }
+# key: lambda
+# contributor: fuqcool@gmail.com
+# --
+function ($1) {
+    $0
+}

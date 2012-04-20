@@ -52,6 +52,9 @@
           c-mode-common-mode-hook
           emacs-lisp-mode-hook))
 
+;; Use text mode as default major mode.
+(setq default-major-mode 'text-mode)
+
 ;; ignore buffer name cases
 (setq read-buffer-completion-ignore-case t)
 ;; ignore file name cases
