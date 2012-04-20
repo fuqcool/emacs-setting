@@ -1,0 +1,5 @@
+# name: console.log(...)
+# key: log
+# contributor: fuqcool@gmail.com
+# --
+console.log($1);$0
