@@ -52,6 +52,11 @@
           c-mode-common-mode-hook
           emacs-lisp-mode-hook))
 
+;; ignore buffer name cases
+(setq read-buffer-completion-ignore-case t)
+;; ignore file name cases
+(setq read-file-name-completion-ignore-case t)
+
 ;; Always reserve 3-digit-width when line number is less than 100.
 (setq linum-format "%3d")
 
