@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: for (var prop in obj) { ... }
+# key: forin
+# contributor: fuqcool@gmail.com
+# --
+for (var ${1:prop} in ${2:obj}) {
+$0
+}
