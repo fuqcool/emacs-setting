@@ -42,10 +42,7 @@
                       (beginning-of-line-text)
                     (beginning-of-line))))
 ;; kill whole line
-(global-set-key "\C-k"
-                (lambda ()
-                  (interactive)
-                  (kill-whole-line)))
+(global-set-key "\C-k" 'kill-whole-line)
 
 ;; display line numbers
 ;; line-mode is useless in some cases, so I just list out the
