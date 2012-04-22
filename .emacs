@@ -1,6 +1,28 @@
 ;; hide tool bar
 (tool-bar-mode nil)
 
+;; share clipboard with external programs
+(setq x-select-enable-clipboard t)
+
+;; insert spaces instead of tabs
+(setq-default indent-tabs-mode nil)
+
+;; prefer utf-8
+(setq prefer-coding-system 'utf-8)
+(setq default-buffer-file-coding-system 'utf-8)
+
+;; ignore buffer name cases
+(setq read-buffer-completion-ignore-case t)
+;; ignore file name cases
+(setq read-file-name-completion-ignore-case t)
+
+;; find true name of a file
+(setq find-file-visit-truename t)
+(setq find-file-suppress-same-file-warnings t)
+
+;; Use text mode as default major mode.
+(setq default-major-mode 'text-mode)
+
 ;; Iterate a list of fonts, if current font exists, set
 ;; font style and size.
 (defun try-set-font (font-list)
@@ -19,16 +41,6 @@
                 ("Consolas" . 13)
                 ("DejaVuSans Mono" . 12)
                 ("Courier New" . 12)))
-
-;; share clipboard with external programs
-(setq x-select-enable-clipboard t)
-
-;; insert spaces instead of tabs
-(setq-default indent-tabs-mode nil)
-
-;; prefer utf-8
-(setq prefer-coding-system 'utf-8)
-(setq default-buffer-file-coding-system 'utf-8)
 
 ;; shortcuts
 ;; f1 -> shell
@@ -52,14 +64,6 @@
           scheme-mode-hook
           c-mode-common-mode-hook
           emacs-lisp-mode-hook))
-
-;; Use text mode as default major mode.
-(setq default-major-mode 'text-mode)
-
-;; ignore buffer name cases
-(setq read-buffer-completion-ignore-case t)
-;; ignore file name cases
-(setq read-file-name-completion-ignore-case t)
 
 ;; Always reserve 3-digit-width when line number is less than 100.
 (setq linum-format "%3d")
