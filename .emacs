@@ -23,6 +23,9 @@
 ;; Use text mode as default major mode.
 (setq default-major-mode 'text-mode)
 
+;; Set title format -- display file name or buffer name.
+(setq frame-title-format '(buffer-file-name "%f" "%b"))
+
 ;; Iterate a list of fonts, if current font exists, set
 ;; font style and size.
 (defun try-set-font (font-list)
@@ -45,6 +48,10 @@
 ;; shortcuts
 ;; f1 -> shell
 (global-set-key [f1] 'shell)
+;; f12 -> open .emacs
+(global-set-key [f12] (lambda ()
+                        (interactive)
+                        (find-file "~/.emacs")))
 ;; Click C-a go to beginning of line, click again
 ;; go to beginning of line text.
 (global-set-key "\C-a"
