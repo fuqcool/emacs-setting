@@ -70,7 +70,11 @@
         '(python-mode-hook
           scheme-mode-hook
           c-mode-common-mode-hook
-          emacs-lisp-mode-hook))
+          emacs-lisp-mode-hook
+          js-mode-hook))
+
+;; open json file in javascript mode
+(add-to-list 'auto-mode-alist '("\\.json$" . js-mode))
 
 ;; Always reserve 3-digit-width when line number is less than 100.
 (setq linum-format "%3d")
