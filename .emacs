@@ -75,6 +75,9 @@
 
 ;; open json file in javascript mode
 (add-to-list 'auto-mode-alist '("\\.json$" . js-mode))
+;; js-mode setting
+(setq js-auto-indent-flag nil)
+(setq js-indent-level 2)
 
 ;; Always reserve 3-digit-width when line number is less than 100.
 (setq linum-format "%3d")
