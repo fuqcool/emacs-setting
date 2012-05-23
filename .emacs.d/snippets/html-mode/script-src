@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: <script src="..."></script>
+# key: script
+# contributor: fuqcool@gmail.com
+# --
+<script src="$1"></script>$0
