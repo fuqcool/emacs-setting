@@ -62,6 +62,12 @@
                     (beginning-of-line))))
 ;; kill whole line
 (global-set-key "\C-k" 'kill-whole-line)
+;; \C-; => comment or uncomment line
+(global-set-key [(control ?\;)]
+                (lambda ()
+                  (interactive)
+                  (comment-or-uncomment-region (line-beginning-position)
+                                               (line-end-position))))
 
 ;; display line numbers
 ;; line-mode is useless in some cases, so I just list out the
