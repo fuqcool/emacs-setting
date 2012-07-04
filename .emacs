@@ -1,4 +1,4 @@
-1;; hide tool bar
+;; hide tool bar
 (tool-bar-mode nil)
 
 ;; share clipboard with external programs
