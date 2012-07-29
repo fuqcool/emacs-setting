@@ -1,0 +1,3 @@
+#!/bin/bash
+
+jslint $@ | sed 'N;s/\n/\I BLAME BOTH FLYMAKE AND JSLINT/'

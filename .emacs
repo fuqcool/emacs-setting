@@ -109,7 +109,7 @@
 (add-to-list 'auto-mode-alist '("[Rr]akefile$" . ruby-mode))
 ;; js-mode setting
 (setq js-auto-indent-flag nil)
-(setq js-indent-level 2)
+;; (setq js-indent-level 2)
 
 ;; Always reserve 3-digit-width when line number is less than 100.
 (setq linum-format "%3d")
@@ -161,3 +161,24 @@
 (require 'color-theme)
 (color-theme-initialize)
 (color-theme-robin-hood)
+
+(add-to-list 'load-path "~/.emacs.d/plugins/flymake")
+;; show error message in mini buffer
+(require 'flymake-cursor)
+;; show errors on fringe
+(require 'rfringe)
+
+;; flymake for js
+(add-to-list 'load-path "~/.emacs.d/plugins/flymake/js")
+(require 'flymake-jslint)
+(setq jslint-command "~/.emacs.d/plugins/flymake/js/jslint-wrapper")
+(add-hook 'js-mode-hook
+	  (lambda () (flymake-mode t)))
+
+;; Check syntax only when saving, so it will be less annoying. :-)
+(eval-after-load "flymake"
+  '(progn
+     (defun flymake-after-change-function (start stop len)
+       "Start syntax check for current buffer if it isn't already running."
+       ;; Do nothing, don't want to run checks until I save.
+       )))

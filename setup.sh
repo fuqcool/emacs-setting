@@ -1,4 +1,5 @@
 #!/bin/bash
+
 dir=$(dirname $0)
 abspath=$(readlink -e ${dir})
 $(ln -s ${abspath}/.emacs ~/.emacs)
