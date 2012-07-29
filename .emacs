@@ -182,3 +182,9 @@
        "Start syntax check for current buffer if it isn't already running."
        ;; Do nothing, don't want to run checks until I save.
        )))
+
+(setq jslint-options-global-var '("$"))
+(setq jslint-options-boolean 
+      '("plusplus"
+        "browser"
+        ))
