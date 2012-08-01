@@ -2,3 +2,4 @@
 .emacs.d/auto-save-list/
 *.elc
 .emacs.d/tramp
+.emacs.d/session.*
