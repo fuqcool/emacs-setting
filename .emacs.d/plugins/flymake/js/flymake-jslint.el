@@ -45,7 +45,7 @@
   ;;             flymake-err-line-patterns))
 
   (setq flymake-err-line-patterns
-        (cons '("^[[:space:]]+#[[:digit:]]+ \\(.+\\)I BLAME BOTH FLYMAKE AND JSLINT.+// Line \\([[:digit:]]+\\), Pos \\([[:digit:]]+\\)$" nil 2 3 1)
+        (cons '("^[[:space:]]+#[[:digit:]]+ \\(.+\\) // Line \\([[:digit:]]+\\), Pos \\([[:digit:]]+\\)$" nil 2 3 1)
               flymake-err-line-patterns))
   
   (add-to-list 'flymake-allowed-file-name-masks

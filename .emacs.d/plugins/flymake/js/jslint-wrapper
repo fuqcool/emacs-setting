@@ -1,3 +1,4 @@
 #!/bin/bash
 
-jslint $@ | sed 'N;s/\n/\I BLAME BOTH FLYMAKE AND JSLINT/'
+# jslint $@ | sed 'N;s/\n/\I BLAME BOTH FLYMAKE AND JSLINT/'
+jslint $@ | sed 'N;s/\n//'
