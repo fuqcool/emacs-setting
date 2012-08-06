@@ -26,6 +26,9 @@
 ;; Set title format -- display file name or buffer name.
 (setq frame-title-format '(buffer-file-name "%f" "%b"))
 
+;; Remove trailing whitespaces.
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
 ;; Iterate a list of fonts, if current font exists, set
 ;; font style and size.
 (defun try-set-font (font-list)
@@ -183,8 +186,11 @@
        ;; Do nothing, don't want to run checks until I save.
        )))
 
-(setq jslint-options-global-var '("$"))
-(setq jslint-options-boolean 
+(setq jslint-predefs '("$"))
+(setq jslint-flags
       '("plusplus"
-        "browser"
-        ))
+        "browser"))
+(setq jslint-command-options
+      '(("indent" . 4)
+        ("maxerr" . 100)
+        ("maxlen" . 80)))
