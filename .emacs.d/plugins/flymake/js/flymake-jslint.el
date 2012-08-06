@@ -3,8 +3,9 @@
   :type 'string
   :group 'jslint)
 
-(defvar jslint-options-boolean nil)
-(defvar jslint-options-global-var nil)
+(defvar jslint-flags nil)
+(defvar jslint-command-options nil)
+(defvar jslint-predefs nil)
 
 (when (load "flymake" t)
   (defun flymake-jslint-init ()
@@ -18,15 +19,15 @@
                                  local-file))))
 
   (defun jslint-compose-options ()
-    (defun compose-global-var-options ()
-      (if jslint-options-global-var
+    (defun compose-predefs ()
+      (if jslint-predefs
           (mapconcat
            (lambda (x)
              (concat "--predef " x))
-           jslint-options-global-var " ")
+           jslint-predefs " ")
         ""))
-    (defun compose-boolean-options ()
-      (if jslint-options-boolean
+    (defun compose-flags ()
+      (if jslint-flags
           (mapconcat
            (lambda (x)
              (if (consp x)
@@ -34,10 +35,20 @@
                      (concat "--" (car x))
                    (concat "--" (car x) " false"))
                (concat "--" x)))
-           jslint-options-boolean " ")
+           jslint-flags " ")
         ""))
-    (concat " " (compose-global-var-options) " "
-            (compose-boolean-options) " "))
+    (defun compose-command-options ()
+      (if jslint-command-options
+          (mapconcat
+           (lambda (x)
+             (if (consp x)
+                 (concat "--" (car x) " "
+                         (number-to-string (cdr x)))))
+           jslint-command-options " ")
+        ""))
+    (concat " " (compose-flags) " "
+            (compose-predefs) " "
+            (compose-command-options) " "))
 
   ;; (setq flymake-err-line-patterns 
   ;;       (cons '("^  [[:digit:]]+ \\([[:digit:]]+\\),\\([[:digit:]]+\\): \\(.+\\)$"  
