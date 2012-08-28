@@ -39,7 +39,7 @@
     (let ((font-name (car (car font-list)))
           (font-size (cdr (car font-list))))
       (if (font-exists font-name)
-          (set-default-font (concat font-name "-" 
+          (set-default-font (concat font-name "-"
                                     (number-to-string font-size)))
         (try-set-font (cdr font-list))))))
 
@@ -104,7 +104,8 @@
           scheme-mode-hook
           c-mode-common-mode-hook
           emacs-lisp-mode-hook
-          js-mode-hook))
+          js-mode-hook
+          ruby-mode-hook))
 
 ;; open json file in javascript mode
 (add-to-list 'auto-mode-alist '("\\.json$" . js-mode))
