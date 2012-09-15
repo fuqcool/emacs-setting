@@ -190,7 +190,9 @@
 (setq jslint-predefs '("$"))
 (setq jslint-flags
       '("plusplus"
-        "browser"))
+        "browser"
+        "nomen"
+        "vars"))
 (setq jslint-command-options
       '(("indent" . 4)
         ("maxerr" . 100)
