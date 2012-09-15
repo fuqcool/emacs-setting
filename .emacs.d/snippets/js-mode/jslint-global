@@ -1,0 +1,5 @@
+# name: /*global ... */
+# key: jslint
+# contributor: fuqcool@gmail.com
+# --
+/*global $0 */
