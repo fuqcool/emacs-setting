@@ -102,7 +102,7 @@
 (mapcar (lambda (mode) (add-hook mode 'linum-mode))
         '(python-mode-hook
           scheme-mode-hook
-          c-mode-common-mode-hook
+          c-mode-hook
           emacs-lisp-mode-hook
           js-mode-hook
           ruby-mode-hook))
@@ -176,8 +176,7 @@
 (add-to-list 'load-path "~/.emacs.d/plugins/flymake/js")
 (require 'flymake-jslint)
 (setq jslint-command "~/.emacs.d/plugins/flymake/js/jslint-wrapper")
-(add-hook 'js-mode-hook
-	  (lambda () (flymake-mode t)))
+;; (add-hook 'js-mode-hook (lambda () (flymake-mode t)))
 
 ;; Check syntax only when saving, so it will be less annoying. :-)
 (eval-after-load "flymake"
@@ -196,4 +195,4 @@
 (setq jslint-command-options
       '(("indent" . 4)
         ("maxerr" . 100)
-        ("maxlen" . 80)))
+        ("maxlen" . 120)))
