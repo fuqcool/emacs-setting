@@ -1,5 +1,5 @@
 ;; hide tool bar
-(tool-bar-mode nil)
+(tool-bar-mode 0)
 
 ;; share clipboard with external programs
 (setq x-select-enable-clipboard t)
