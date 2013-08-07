@@ -3,3 +3,4 @@
 *.elc
 .emacs.d/tramp
 .emacs.d/session.*
+*~
