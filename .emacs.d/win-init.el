@@ -28,6 +28,11 @@
 
 (linum-mode)
 
+(when (string-equal system-type "darwin")
+  (set-frame-position (selected-frame) 0 0)
+  (set-frame-width (selected-frame)
+                   (- (/ (x-display-pixel-width) (frame-char-width)) 4)))
+
 (add-to-list 'load-path "~/.emacs.d/plugins/flymake")
 ;; show error message in mini buffer
 (require 'flymake-cursor)

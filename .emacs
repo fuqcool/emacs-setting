@@ -1,5 +1,5 @@
-(when window-system
-  (load-file "~/.emacs.d/win-init.el"))
+(when (display-graphic-p)
+  (load-file "~/.emacs.d/win-init.el")) ;
 
 (load-file "~/.emacs.d/key-bindings.el")
 
