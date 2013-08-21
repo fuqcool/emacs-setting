@@ -50,3 +50,18 @@
                       (kill-region (line-beginning-position)
                                    (line-end-position))
                       (message "killed line")))))
+
+;; move line up
+(global-set-key "\M-p"
+                (lambda ()
+                  (interactive)
+                  (transpose-lines 1)
+                  (forward-line -2)))
+
+;; move line down
+(global-set-key "\M-n"
+                (lambda ()
+                  (interactive)
+                  (forward-line 1)
+                  (transpose-lines 1)
+                  (forward-line -1)))
