@@ -55,8 +55,9 @@
 (global-set-key "\M-p"
                 (lambda ()
                   (interactive)
-                  (transpose-lines 1)
-                  (forward-line -2)))
+                  (when (not (= (line-number-at-pos) 1))
+                    (transpose-lines 1)
+                    (forward-line -2))))
 
 ;; move line down
 (global-set-key "\M-n"
