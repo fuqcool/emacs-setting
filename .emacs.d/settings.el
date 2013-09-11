@@ -30,6 +30,7 @@
 (add-to-list 'auto-mode-alist '("\\.json$" . js-mode))
 ;; open rakefile in ruby mode
 (add-to-list 'auto-mode-alist '("^[Rr]akefile$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("\\.rkt$" . scheme-mode))
 ;; js-mode setting
 (setq js-auto-indent-flag nil)
 (setq js-indent-level 2)
