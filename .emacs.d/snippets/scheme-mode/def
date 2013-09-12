@@ -1,0 +1,6 @@
+# name: (define (foo ...) ...)
+# key: def
+# contributor: fuqcool@gmail.com
+# --
+(define ($1)
+$0)
