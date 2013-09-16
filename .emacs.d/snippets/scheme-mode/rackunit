@@ -1,0 +1,7 @@
+# name: rackunit
+# key: rackunit
+# contributor: fuqcool@gmail.com
+# --
+(require rackunit)
+(require rackunit/text-ui)
+$0
