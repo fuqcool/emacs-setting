@@ -45,6 +45,17 @@
 (add-to-list 'auto-mode-alist '("\\.ya?ml$" . yaml-mode))
 
 
+(load-file "~/.emacs.d/plugins/geiser/elisp/geiser.el")
+(setq geiser-active-implementations '(racket))
+
+
+;; paredit
+(autoload 'enable-paredit-mode "paredit"
+  "Turn on pseudo-structural editing of Lisp code."
+  t)
+(add-hook 'scheme-mode-hook 'enable-paredit-mode)
+
+
 (when (display-graphic-p)
   ;; color theme
   (add-to-list 'load-path "~/.emacs.d/plugins/color-theme")
