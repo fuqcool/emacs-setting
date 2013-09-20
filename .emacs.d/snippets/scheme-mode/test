@@ -3,5 +3,4 @@
 # contributor: fuqcool@gmail.com
 # --
 (define-test-suite ${1:test-suite-name}
-  "${2:test description}"
   $0)
