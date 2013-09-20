@@ -56,6 +56,13 @@
 (add-hook 'scheme-mode-hook 'enable-paredit-mode)
 
 
+;; multiple cursor
+(add-to-list 'load-path "~/.emacs.d/plugins/multiple-cursors")
+(require 'multiple-cursors)
+(global-set-key (kbd "C-c m") 'mc/edit-ends-of-lines)
+(global-set-key (kbd "C-S-<mouse-1>") 'mc/add-cursor-on-click)
+
+
 (when (display-graphic-p)
   ;; color theme
   (add-to-list 'load-path "~/.emacs.d/plugins/color-theme")
@@ -68,6 +75,4 @@
   ;; show error message in mini buffer
   (require 'flymake-cursor)
   ;; show errors on fringe
-  (require 'rfringe)
-
-  )
+  (require 'rfringe))

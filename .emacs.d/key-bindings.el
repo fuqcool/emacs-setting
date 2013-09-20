@@ -1,7 +1,7 @@
 ;; shortcuts
 
 ;; f1 -> shell
-(global-set-key [f1] 'shell)
+(global-set-key (kbd "C-1") 'shell)
 
 ;; f12 -> open .emacs
 (global-set-key [f12] (lambda ()
