@@ -4,3 +4,4 @@
 .emacs.d/tramp
 .emacs.d/session.*
 *~
+.emacs.d/.mc-lists.el
