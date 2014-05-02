@@ -41,6 +41,11 @@
 (setq js-auto-indent-flag nil)
 (setq js-indent-level 2)
 
+(add-hook 'java-mode-hook (lambda ()
+                            (setq c-basic-offset 4
+                                  tab-width 4
+                                  indent-tabs-mode t)))
+
 ;; set emacs PATH to shell PATH
 (defun set-exec-path-from-shell-PATH ()
   "Set up Emacs' `exec-path' and PATH environment variable to match that used by the user's shell."
