@@ -11,6 +11,7 @@
             (package-install package)))
         '(php-mode
           yaml-mode
+          coffee-mode
           yasnippet
           color-theme
           dropdown-list
