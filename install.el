@@ -7,14 +7,14 @@
 (package-initialize)
 
 (mapcar (lambda (package)
-       (unless (package-installed-p package)
-         (package-install package)))
-     '(php-mode
-       yaml-mode
-       yasnippet
-       color-theme
-       dropdown-list
-       paredit
-       multiple-cursors
-       google-c-style
-       auto-complete))
+          (unless (package-installed-p package)
+            (package-install package)))
+        '(php-mode
+          yaml-mode
+          yasnippet
+          color-theme
+          dropdown-list
+          paredit
+          multiple-cursors
+          google-c-style
+          auto-complete))
