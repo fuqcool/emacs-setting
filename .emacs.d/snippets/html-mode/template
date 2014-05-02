@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name: HTML Template
+# key: template
+# --
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>$0</title>
+  </head>
+
+  <body>
+  </body>
+</html>
