@@ -1,8 +1,7 @@
 *.elc
 *~
-/.emacs.d/.mc-lists.el
-/.emacs.d/auto-save-list
-/.emacs.d/session.*
-/.emacs.d/tramp
-/.emacs.d/ac-comphist.dat
-/.emacs.d/elpa
+/.emacs.d/*
+!/.emacs.d/plugin
+!/.emacs.d/snippets
+!/.emacs.d/settings.el
+!/.emacs.d/key-bindings.el
