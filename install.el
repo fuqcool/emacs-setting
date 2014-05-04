@@ -4,6 +4,7 @@
                          ("marmalade" . "http://marmalade-repo.org/packages/")
                          ("melpa" . "http://melpa.milkbox.net/packages/")))
 
+(package-refresh-contents)
 (package-initialize)
 
 (mapcar (lambda (package)
@@ -20,4 +21,6 @@
           google-c-style
           auto-complete
           flx-ido
-          projectile))
+          projectile
+          magit
+          ))
