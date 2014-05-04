@@ -18,4 +18,6 @@
           paredit
           multiple-cursors
           google-c-style
-          auto-complete))
+          auto-complete
+          flx-ido
+          projectile))
