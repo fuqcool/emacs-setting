@@ -30,6 +30,8 @@
 (add-to-list 'auto-mode-alist '("\\.json$" . js-mode))
 ;; open rakefile in ruby mode
 (add-to-list 'auto-mode-alist '("^[Rr]akefile$" . ruby-mode))
+;; rabl
+(add-to-list 'auto-mode-alist '("\\.rabl$" . ruby-mode))
 ;; racket
 (add-to-list 'auto-mode-alist '("\\.rkt$" . scheme-mode))
 (add-hook 'scheme-mode-hook
@@ -43,6 +45,8 @@
 ;; js-mode setting
 (setq js-auto-indent-flag nil)
 (setq js-indent-level 2)
+
+(custom-set-variables '(coffee-tab-width 2))
 
 (add-hook 'java-mode-hook (lambda ()
                             (setq c-basic-offset 4
@@ -77,7 +81,7 @@
                                       (number-to-string font-size)))
           (try-set-font (cdr font-list))))))
 
-  (try-set-font '(("Monaco" . 17)
+  (try-set-font '(("Monaco" . 20)
                   ("Consolas" . 13)
                   ("DejaVuSans Mono" . 12)
                   ("Courier New" . 12)))

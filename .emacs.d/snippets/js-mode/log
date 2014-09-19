@@ -2,4 +2,4 @@
 # key: log
 # contributor: fuqcool@gmail.com
 # --
-console.log($1);$0
+console.log($1)$0
