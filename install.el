@@ -20,7 +20,6 @@
           multiple-cursors
           google-c-style
           auto-complete
-          flx-ido
           projectile
           magit
-          ))
+          grizzl))

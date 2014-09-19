@@ -26,33 +26,6 @@
 ;; Remove trailing whitespaces.
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
-;; open json file in javascript mode
-(add-to-list 'auto-mode-alist '("\\.json$" . js-mode))
-;; open rakefile in ruby mode
-(add-to-list 'auto-mode-alist '("^[Rr]akefile$" . ruby-mode))
-;; rabl
-(add-to-list 'auto-mode-alist '("\\.rabl$" . ruby-mode))
-;; racket
-(add-to-list 'auto-mode-alist '("\\.rkt$" . scheme-mode))
-(add-hook 'scheme-mode-hook
-          (lambda () (highlight-lines-matching-regexp ".\\{81\\}" "red")))
-;; less
-(add-to-list 'auto-mode-alist '("\\.less$" . css-mode))
-
-;; css
-(add-hook 'css-mode-hook (lambda () (setq css-indent-offset 2)))
-
-;; js-mode setting
-(setq js-auto-indent-flag nil)
-(setq js-indent-level 2)
-
-(custom-set-variables '(coffee-tab-width 2))
-
-(add-hook 'java-mode-hook (lambda ()
-                            (setq c-basic-offset 4
-                                  tab-width 4
-                                  indent-tabs-mode t)))
-
 ;; set emacs PATH to shell PATH
 (defun set-exec-path-from-shell-PATH ()
   "Set up Emacs' `exec-path' and PATH environment variable to match that used by the user's shell."
