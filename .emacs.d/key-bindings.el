@@ -8,14 +8,14 @@
                         (interactive)
                         (find-file "~/.emacs")))
 
-;; Click C-a go to beginning of line, click again
-;; go to beginning of line text.
+;; Go to beginning of text first, then go to beginning of line
 (global-set-key "\C-a"
                 (lambda ()
                   (interactive)
-                  (if (= (point) (line-beginning-position))
-                      (beginning-of-line-text)
-                    (beginning-of-line))))
+                  (let ((current-pos (point)))
+                    (beginning-of-line-text)
+                    (if (= current-pos (point))
+                        (beginning-of-line)))))
 
 ;; kill whole line
 (global-set-key "\C-k" 'kill-whole-line)
