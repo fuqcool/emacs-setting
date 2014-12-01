@@ -1,10 +1,10 @@
 ;; shortcuts
 
 ;; f1 -> shell
-(global-set-key (kbd "C-1") 'shell)
+(global-set-key [f1] 'shell)
 
 ;; f12 -> open .emacs
-(global-set-key [f12] (lambda ()
+(global-set-key [f2] (lambda ()
                         (interactive)
                         (find-file "~/.emacs")))
 
@@ -66,3 +66,9 @@
                   (forward-line 1)
                   (transpose-lines 1)
                   (forward-line -1)))
+
+;; disable this
+(global-set-key "\C-x\C-c"
+                (lambda ()
+                  (interactive)
+                  (message "Command disabled")))
