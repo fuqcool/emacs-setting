@@ -72,3 +72,9 @@
                 (lambda ()
                   (interactive)
                   (message "Command disabled")))
+
+;; disable this
+(global-set-key "\C-z"
+                (lambda ()
+                  (interactive)
+                  (message "Command disabled")))
