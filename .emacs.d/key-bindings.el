@@ -13,7 +13,7 @@
                 (lambda ()
                   (interactive)
                   (let ((current-pos (point)))
-                    (beginning-of-line-text)
+                    (back-to-indentation)
                     (if (= current-pos (point))
                         (beginning-of-line)))))
 
