@@ -68,7 +68,4 @@
                   (forward-line -1)))
 
 ;; disable this
-(global-set-key "\C-z"
-                (lambda ()
-                  (interactive)
-                  (message "Command disabled")))
+(global-set-key "\C-z" 'undo)
