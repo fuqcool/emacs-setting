@@ -1,4 +1,6 @@
 #!/bin/bash
 
-$(ln -s $PWD/.emacs ~/.emacs)
-$(ln -s $PWD/.emacs.d ~/.emacs.d)
+ln -s $(pwd)/.emacs    ~/.emacs
+ln -s $(pwd)/.emacs.d  ~/.emacs.d
+
+emacs --script install.el
