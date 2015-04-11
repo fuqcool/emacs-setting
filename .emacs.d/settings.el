@@ -59,8 +59,7 @@
 
   (try-set-font '(("Monaco" . 20)
                   ("Consolas" . 13)
-                  ("DejaVuSans Mono" . 12)
-                  ("Courier New" . 12)))
+                  ("Monospace" . 15)))
 
   ;; show line numbers
   (global-linum-mode)
