@@ -68,12 +68,6 @@
                   (forward-line -1)))
 
 ;; disable this
-(global-set-key "\C-x\C-c"
-                (lambda ()
-                  (interactive)
-                  (message "Command disabled")))
-
-;; disable this
 (global-set-key "\C-z"
                 (lambda ()
                   (interactive)

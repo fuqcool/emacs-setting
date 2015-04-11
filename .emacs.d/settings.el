@@ -26,6 +26,9 @@
 ;; Remove trailing whitespaces.
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
+;; Ask before exit
+(setq confirm-kill-emacs 'yes-or-no-p)
+
 ;; set emacs PATH to shell PATH
 (defun set-exec-path-from-shell-PATH ()
   "Set up Emacs' `exec-path' and PATH environment variable to match that used by the user's shell."
