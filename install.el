@@ -22,4 +22,5 @@
           auto-complete
           projectile
           magit
-          grizzl))
+          grizzl
+          jade-mode))
