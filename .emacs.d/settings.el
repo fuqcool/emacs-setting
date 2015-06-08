@@ -4,6 +4,9 @@
 ;; insert spaces instead of tabs
 (setq-default indent-tabs-mode nil)
 
+;; do not backup
+(setq make-backup-files nil)
+
 ;; prefer utf-8
 (setq prefer-coding-system 'utf-8)
 (setq default-buffer-file-coding-system 'utf-8)
