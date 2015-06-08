@@ -21,6 +21,5 @@
           google-c-style
           auto-complete
           projectile
-          magit
           grizzl
           jade-mode))
