@@ -13,6 +13,7 @@
         '(php-mode
           yaml-mode
           coffee-mode
+          go-mode
           yasnippet
           color-theme
           dropdown-list
@@ -22,4 +23,6 @@
           auto-complete
           projectile
           grizzl
-          jade-mode))
+          jade-mode
+          stylus-mode
+          sws-mode))
