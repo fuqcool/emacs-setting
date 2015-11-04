@@ -10,7 +10,9 @@
 (mapcar (lambda (package)
           (unless (package-installed-p package)
             (package-install package)))
-        '(php-mode
+        '(haskell-mode
+          pig-mode
+          php-mode
           yaml-mode
           coffee-mode
           yasnippet
