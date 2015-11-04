@@ -15,6 +15,7 @@
           php-mode
           yaml-mode
           coffee-mode
+          go-mode
           yasnippet
           color-theme
           dropdown-list
@@ -23,5 +24,7 @@
           google-c-style
           auto-complete
           projectile
-          magit
-          grizzl))
+          grizzl
+          jade-mode
+          stylus-mode
+          sws-mode))
