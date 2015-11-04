@@ -1,8 +1,10 @@
-This is my emacs configuration.
-Please feel free to do **anything** to this repo.
+My emacs configuration.
 
-### Scripts
+## Scripts
 
-- `install.el` is used to install all the plugins through ELPA. One can invoke it using `emacs --script install.el`.
+- `link.sh` links `.emacs` and `.emacs.d` to `~/.emacs` and `~/.emacs.d` separately.
 
-- `setup.bat|setup.sh` are used to link `.emacs` and `.emacs.d` to `~/.emacs` and `~/.emacs.d`, separately. Use only one of them: `bat` is for Windows, `sh` is for Linux and MacOS.
+- `sync.sh` syncs packages that are specified in `install.el`.
+
+## License
+MIT License.
