@@ -27,4 +27,6 @@
           grizzl
           jade-mode
           stylus-mode
+          markdown-mode
+          scala-mode2
           sws-mode))
