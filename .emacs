@@ -7,4 +7,6 @@
 
 (load-file "~/.emacs.d/settings.el")
 (load-file "~/.emacs.d/key-bindings.el")
-(load-file "~/.emacs.d/local.el")
+
+(when (file-exists-p "~/.emacs.d/local.el")
+  (load-file "~/.emacs.d/local.el"))
