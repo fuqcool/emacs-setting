@@ -1,4 +1,4 @@
-(package-initialize)
+(load-file "~/.emacs.d/install.el")
 
 ;; load plugin settings
 (mapcar (lambda (file)
