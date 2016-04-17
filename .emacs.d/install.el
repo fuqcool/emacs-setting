@@ -32,4 +32,4 @@
 
     (package-refresh-contents)
 
-    (mapcar (lambda (p) (package-install p)) uninstalled-packages)))
+    (mapcar 'package-install uninstalled-packages)))
