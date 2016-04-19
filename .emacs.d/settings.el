@@ -1,6 +1,9 @@
 ;; hide tool bar
 (tool-bar-mode 0)
 
+;; hide scroll bar
+(scroll-bar-mode 0)
+
 ;; share clipboard with external programs
 (setq x-select-enable-clipboard t)
 
