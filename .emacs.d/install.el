@@ -3,7 +3,8 @@
 
 (package-initialize)
 
-(let* ((packages '(haskell-mode
+(let* ((packages '(js2-mode
+                   haskell-mode
                    pig-mode
                    php-mode
                    yaml-mode
@@ -22,7 +23,8 @@
                    stylus-mode
                    markdown-mode
                    scala-mode2
-                   sws-mode))
+                   sws-mode
+                   editorconfig))
        (uninstalled-packages (cl-remove-if 'package-installed-p packages)))
 
   (when (> (length uninstalled-packages) 0)
