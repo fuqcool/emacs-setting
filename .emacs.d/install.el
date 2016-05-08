@@ -24,7 +24,8 @@
                    markdown-mode
                    scala-mode2
                    sws-mode
-                   editorconfig))
+                   editorconfig
+                   expand-region))
        (uninstalled-packages (cl-remove-if 'package-installed-p packages)))
 
   (when (> (length uninstalled-packages) 0)
