@@ -25,7 +25,8 @@
                    scala-mode2
                    sws-mode
                    editorconfig
-                   expand-region))
+                   expand-region
+                   web-mode))
        (uninstalled-packages (cl-remove-if 'package-installed-p packages)))
 
   (when (> (length uninstalled-packages) 0)
