@@ -43,3 +43,6 @@
 
 ;; Always reserve 3-digit-width when line number is less than 100.
 (setq linum-format "%3d")
+
+;; remember emacs sessions on restart
+(desktop-save-mode 1)

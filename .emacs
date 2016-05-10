@@ -8,3 +8,6 @@
 
 (when (file-exists-p "~/.emacs.d/local.el")
   (load-file "~/.emacs.d/local.el"))
+
+;; fullscreen on start
+(toggle-frame-fullscreen)
