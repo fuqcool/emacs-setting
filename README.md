@@ -1,6 +1,6 @@
 My emacs configuration.
 
-## Scripts
+## Install
 
 - `link.sh` links `.emacs` and `.emacs.d` to `~/.emacs` and `~/.emacs.d` separately.
 
