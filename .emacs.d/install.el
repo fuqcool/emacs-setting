@@ -1,8 +1,6 @@
 (require 'package)
 (require 'cl-lib)
 
-(package-initialize)
-
 (let* ((packages '(js2-mode
                    haskell-mode
                    pig-mode
@@ -22,7 +20,7 @@
                    jade-mode
                    stylus-mode
                    markdown-mode
-                   scala-mode2
+                   scala-mode
                    sws-mode
                    editorconfig
                    expand-region
