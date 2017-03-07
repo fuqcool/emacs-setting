@@ -2,7 +2,4 @@
 
 (setq projectile-completion-system 'grizzl)
 
-;; Shortcuts
-(global-set-key (kbd "C-c p p") 'projectile-switch-project)
-(global-set-key (kbd "C-c p s") 'projectile-switch-project)
-(global-set-key (kbd "C-c p f") 'projectile-find-file)
+(define-key projectile-mode-map (kbd "C-c p d") 'projectile-find-file-in-directory)
